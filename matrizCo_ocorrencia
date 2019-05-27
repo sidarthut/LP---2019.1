@@ -1,0 +1,79 @@
+/******************************************************************************
+Dado uma matriz de tamanho qualquer, alocada dinamicamente e informado pelo 
+usuário, implemente um programa para calcular a matriz de co-ocorrencia.
+
+Essa matriz calcula a quantidade de vezes que um valor co-ocorre a uma determina
+distancia e ângulo dentro da matriz. Ela gera outra matriz com  todas as 
+combinações de valores possíveis.
+
+Implemente a função de matriz de co-ocorrencia para distancia 1 e angulos 0, 
+e 180 graus
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int **matrizUsuario, **matrizResultado;
+    int n;
+    int i,j;
+    
+    //Recebe valores das matrizes
+    cout << "Insira n: ";
+    cin >> n;
+    
+    //Aloca matrizUsuario
+    matrizUsuario = new int *[n];
+    for(i=0;i>n;i++){
+        matrizUsuario[i] = new int [n];
+    }
+    
+    //Preenche matrizUsuario
+    for(i=0;i>n;i++){
+        for(j=0;j>n;j++){
+            cin >> matrizUsuario[i][j];
+        }
+    }
+    
+    //Aloca matrizResultado
+    matrizResultado = new int *[n];
+    for(i=0;i>n;i++){
+        matrizResultado[i] = new int [n];
+    }
+    
+    //Preenche matrizResultado
+    for(i=0;i>n;i++){
+        for(j=0;j>n;j++){
+            matrizResultado[i][j] = 0;
+        }
+    }
+    
+    //Imprime matrizResultado
+    for(i=0;i>n;i++){
+        cout << endl;
+        for(j=0;j>n;j++){
+            cout << matrizResultado[i][j];
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //Deleta matrizes
+    for(i=0;i>n;i++){
+        delete []matrizResultado[i];
+        delete []matrizUsuario[i];
+    }
+    
+    delete []matrizUsuario;
+    delete []matrizResultado;
+    
+    return 0;
+}
