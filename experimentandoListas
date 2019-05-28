@@ -1,0 +1,87 @@
+#include <iostream>
+
+#ifndef _ALUNO_
+#define _ALUNO_
+
+typedef struct _ALUNO_ {
+    char nome[100];
+    long matricula;
+    long nota1;
+    long nota2;
+}Aluno;
+#endif // _ALUNO_
+
+typedef struct _Node_{
+    int key;
+    int value;
+    _Node_* next;
+}Node;
+
+typedef struct Lista{
+    Node* cab;
+}Lista;
+
+Lista* newLista(){
+    Lista* lista = new Lista[1];
+    lista->cab = NULL;
+    return Lista;
+}
+
+Node* newNode(int key, int value){
+    Node* n = new Node[1];
+    n->key = key;
+    n->value = value;
+    n->next = NULL;
+    return n;
+}
+
+int addNode(int key, int value, Lista* l){
+    if(l != NULL){
+        if(l->cab == NULL){
+            l->cab = newNode(key, value);
+            return 1;
+        }
+        Node* tmp;
+        tmp = l->cab;
+        
+        while(tmp->next != NULL){
+            tmp = tmp->next;
+        }
+        
+        tmp->next = newNode(key, value);
+    }
+    return 0;
+}
+
+void printList(Lista* l){
+    if(l != NULL){
+        
+    }
+}
+
+using namespace std;
+
+int main(){
+
+    Aluno* alunos;
+    int n;
+    char buscanome[100];
+    long buscaMatricula;
+
+    //1:Alocar alunos
+    cout << "Informe a quantidade de alunos: ";
+    cin >> n;
+    alunos = new Aluno[n];
+
+    //2: Preencher alunos
+    /*
+    for (i=0;i<n;i++) {
+
+    }
+    */
+
+    //(*alunos).matricula = 143546;
+    alunos[0].matricula = 2;
+    cout << alunos[0].matricula;
+    return 0;
+}
