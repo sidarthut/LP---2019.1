@@ -1,0 +1,71 @@
+/**********************************************************
+
+1) Implemente um programa que pede para o usuário informar as
+dimensões de uma matriz alocada dinâmicamente, em seguida
+para informar seus valores. O programa deve encontar na matriz
+todos os valores que estejam repetidos, e colocar no lugar
+de cada repetição, o valor -1. O programa deve imprimir a
+matriz resultado na tela.
+
+
+***********************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int** matriz;
+    int i, j, k, l;
+    int linha, coluna;
+    bool first;
+
+    //Aloca matriz
+    cout << "Informe coluna e linha: ";
+    cin >> coluna >> linha;
+
+    matriz = new int* [coluna];
+    for(i=0; i<linha; i++){
+        matriz[i] = new int [coluna];
+    }
+
+
+    //Preenche matriz
+    for(i=0;i<linha;i++){
+        for(j=0;j<coluna;j++){
+            cin >> matriz[i][j];
+        }
+    }
+    
+    
+    for(i=0;i<linha;i++){
+        for(j=0;j<coluna;j++){
+            first = true;
+            for(k=i;k<linha;k++){
+                for(l=j;l<coluna;l++){
+                    if (matriz[i][j] == matriz[k][l] && !first){
+                        matriz[i][j] = -1;
+                        matriz[k][l] = -1;
+                    }
+                    first = false;
+                }
+            }
+        }
+    }
+
+    //Imprime matriz
+    for(i=0;i<linha;i++){
+        cout << endl;
+        for(j=0;j<coluna;j++){
+            cout << matriz[i][j] << " ";
+        }
+    }
+
+
+    for(i=0;i<coluna;i++){
+        delete []matriz[i];
+    }
+    delete []matriz;
+
+    return 0;
+}
