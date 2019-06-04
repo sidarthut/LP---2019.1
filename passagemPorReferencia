@@ -1,0 +1,18 @@
+#include <iostream>
+
+
+void func(int num){
+    std::cout << num << std::endl;
+}
+
+
+int main(){
+
+    int a = 54;
+
+    int* b; // B referencia de A
+    b = &a;
+    func(a);
+    func(*b);
+    
+}
