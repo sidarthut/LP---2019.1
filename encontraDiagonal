@@ -1,0 +1,54 @@
+/******************************************************************************
+
+3) Faça um programa que implemente e teste uma função replace. A função deve receber
+três strings: a primeira é um texto (T), a segunda é uma palavra (A) e a terceira é
+uma nova palavra (B) que deve substituir todas as ocorrências de A em T.
+
+*******************************************************************************/
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+
+//Encontra a posição em que a palavra começa
+int encontra(char *txt, char *word) {
+    char* aux;
+
+    aux = strstr (txt, word);
+    return strlen(txt) - strlen(aux);
+
+}
+
+int main() {
+
+    char texto[200];
+    char antiga[30];
+    char nova[30];
+    char aux[30];
+    int i, local;
+
+    cout << "Insira o texto: ";
+    cin.getline(texto, 200);
+
+    cout << "Insira a palavra a ser trocada: ";
+    cin.getline(antiga, 200);
+
+    cout << "Insira a palavra nova: ";
+    cin.getline(nova, 200);
+
+    local = encontra(texto, antiga);
+
+    for(i=0; i<local;i++){
+        aux[i] = texto[i];
+    }
+    
+    cout << aux;
+    
+    strstr(texto,aux);
+
+
+    return 0;
+}
+
+
