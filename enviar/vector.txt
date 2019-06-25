@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+    //format: vector<DataType> nameOfVector
+    //nameOfVector.push_back(index) ==> add a element to the END of the Vector and also resizes it
+    //nameOfVector.size() ==> return an usigned int equal to the number of the elements
+    //myVector.begin() ==> reads vectors from index 0
+    //nameOfVector.insert(myVector.begin(myVector.begin() + integer, new value) ==> adds elements AT specified index number
+    //myVector.erase(myVector.begin() + integer) ==> removes element AT specified index number
+    //myVector.clear() ==> removes all elements in vector
+    //myVector.empty
+    vector<int> myVector;
+
+    myVector.push_back(3);
+    myVector.push_back(3);
+    myVector.push_back(3);
+    myVector.push_back(3);
+    myVector.push_back(3);
+    myVector.push_back(3);
+
+
+
+    //Int usa 4 bytes de memória
+    //unsigned garante que sempre teremos números positivos
+    //e usando um dos 4 bytes para um algarismo.
+    cout << "Vector: ";
+    for (unsigned int i = 0; i<myVector.size(); i++){
+        cout << myVector.at(i) << " ";
+    }
+    cout << endl;
+
+
+    myVector.insert(myVector.begin() + 3, 5);
+
+    cout << "Vector: ";
+    for (unsigned int i = 0; i<myVector.size(); i++){
+        cout << myVector.at(i) << " ";
+    }
+    cout << endl;
+
+    myVector.erase(myVector.begin() + 3);
+
+    cout << "Vector: ";
+    for (unsigned int i = 0; i<myVector.size(); i++){
+        cout << myVector.at(i) << " ";
+    }
+    cout << endl;
+
+
+    myVector.clear();
+    cout << myVector.empty();
+
+
+    return 0;
+}

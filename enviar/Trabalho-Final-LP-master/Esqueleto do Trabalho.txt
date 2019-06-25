@@ -1,0 +1,222 @@
+Geraldo Braz Júnior
+
+	Linguagem de Programação - Trabalho Final
+
+	- Próximo Exercício - Emily Juliana Costa e Silva
+
+	
+
+Cadastrar Exercícios:
+	*Título ------------------- nome da atividade
+	*Descrição----------------- O que o exercício pede
+	*Categoria----------------- tipo de assunto abordado na atividade. ex: laço, ponteiro 
+	*Nível de Difilcudade------ fácil, médio, difícil, desafios.
+	*gabarito ----------------- resolução do exercício
+
+Cadastrar Novos Usuários:
+	*Nome
+	*Senha
+
+**O programa deve recomendar exercícios para o usuário baseado no nível de dificuldade previamente informados
+
+**O programa deve registrar todo histórico de recomendação de exercício para não recomendar exercícios repetidos, assim cmo guardar todo exercício de maneira persistente.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--> CATEGORIAS:
+
+1) Sintaxe de C++
+2) Ifs e Estrutura de Repetição
+3) Vetores e Matrizes
+4) Alocação Dinâmica	
+5) String
+6) Struct
+7) Funções
+8) Arquivos
+10) Listas e Ponteiros
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***OBSERVAÇÕES:
+	
+	*)Seria interessante colocar dicas nas questões.
+	*)Não repetir exaustivamente o mesmo exercício, ou seja, uma vez que o usuário completou determinado exercício não mostrá-lo novamente.
+	*)seria legal assim que o usuário terminasse odos os exercícios mostrasse alguma mensagem motivacional ou alo do tipo.
+	*) cada usuário tem seu histórico de exercícios que deve permanecer na "memória" do programa.
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*** ALGORITMO ***
+
+Tela de Cadastro:
+
+	cout << insira seu nome de usuario
+	cin >> usuario
+	cout << insira sua senha
+	cin >> senha
+
+	if (teste procurando nome de usuario na lista de usuarios) {
+
+		cout << cadastro realizado com sucesso;
+			ou
+		cout << usuário ja cadastrado;
+	}
+
+	
+	cout << escolha  a categoria do seu exercício:
+
+		CATEGORIAS:
+
+		1) Sintaxe de C++
+		2) Ifs e Estrutura de Repetição
+		3) Vetores e Matrizes
+		4) Alocação Dinâmica	
+		5) String
+		6) Struct
+		7) Funções
+		8) Arquivos
+		10) Listas e Ponteiros ;
+		11) Gabaritos
+	cin >> categoria
+
+	if (se a categoria for diferente de gabarito) {
+		
+	
+	cout << escolha o nível de dificuldade:
+		
+		1)Fácil
+		2)Médio
+		3)Difícil
+		4)Desafio
+	cin >> nivel;
+
+	{ mostrar exercício baseado na categoria e nível de diciculdade }
+
+	cout << para o próximo exercício pressione a tecla "P".
+	cin >> tecla;
+
+	{após mostrar todos os exercícios dessa categoria e nivel, perguntar ao usuário:}
+	
+	cout << Para escolher outro nível de dificuldade pressione a tecla "N";
+  
+		{ programa volta a perguntar qual nível de dificuldade }
+
+	cout << para refazer os exercícos dessa categoria pressione "R";
+
+		{ programa repete a atual categoria de exercício }
+
+	cout << para escolher outra categoria de exercícios pressione a tecla "C";
+
+		{ programa volta a perguntar qual categoria de exercício }
+
+	cout << Para sair pressione "s";
+
+		{ fecha o programa }
+
+	} else{
+	
+	cout << Informe a categoria:
+	cin >> categoria;
+
+	cout << Informe o nível
+	cin >> nível;
+
+	cout << Informe a questão;
+	cin >> questão
+
+	cout << {mostra a resolução do exercício}
+	
+	cout << para escolher outra categoria de exercícios pressione a tecla "C";
+
+		{ programa volta a perguntar qual categoria de exercício }
+
+	cout << Para sair pressione "s";
+
+		{ fecha o programa }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+	É NECESSÁRIO UTILIZAR TODOS OS ASSUNTOS ABORDADOS NA DISCIPLINA:
+
+ [] Ifs e Switchs 
+ [] Laços
+ [] Vetores
+ [] Matrizes
+ [] Alocação Dinâmica - Vetores 
+ [] Alocação Dinâmica -  Matrizes
+ [] Strings
+ [] Fuções
+ [] Recursão
+ [] Ponteiros
+ [] Passagem por referência
+ [] Tipos Compostos
+ [] Listas
+ [] arquivos
+ [] Arquivos .H
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+
+								       Funções
+
+função que cadastra exercicios;
+
+função que le exercicios
+
+função para cadastrar usuarios
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
